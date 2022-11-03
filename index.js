@@ -122,7 +122,15 @@ function countByRating(movies) {
       // Toy Story 4
     };
  */
-function findById() {}
+function findById(movies, id) {
+  let obj = {};
+  for (i = 0; i < movies.length; i++) {
+    if (movies[i].imdbID === id) {
+      return movies[i]
+    }
+  }
+  return null
+}
 
 /**
  * filterByGenre()
