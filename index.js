@@ -90,7 +90,23 @@ function getAverageIMDBRating(movies) {
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
-function countByRating() {}
+function countByRating(movies) {
+  let arr = [];
+  let arrValue = [];
+  let obj = {};
+  for (i = 0; i < movies.length; i++) {
+    arr.push(movies[i].rated)
+  }
+  arr.forEach(function (x) { obj[x] = (obj[x] || 0) + 1; })
+  return obj
+}
+   
+
+
+
+
+
+
 
 /**
  * findById()
